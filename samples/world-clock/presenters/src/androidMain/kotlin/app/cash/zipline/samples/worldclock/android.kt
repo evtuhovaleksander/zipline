@@ -44,6 +44,7 @@ class WorldClockAndroid(
         dispatcher = ziplineDispatcher,
         manifestVerifier = NO_SIGNATURE_CHECKS,
         httpClient = okHttpClient,
+        LeakerLis()
       ),
       manifestUrl = "http://10.0.2.2:8080/manifest.zipline.json",
       host = RealWorldClockHost(),

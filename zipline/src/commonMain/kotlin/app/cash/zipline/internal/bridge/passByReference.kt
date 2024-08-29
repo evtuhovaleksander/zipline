@@ -55,7 +55,8 @@ internal class PassByReferenceSerializer(
 
   override fun serialize(encoder: Encoder, value: PassByReference) {
     require(value is SendByReference<*>)
-    val serviceName = endpoint.generatePassByReferenceName()
+    //val serviceName = endpoint.generatePassByReferenceName()
+    val serviceName = endpoint.generatePassByReferenceName() + "____" + value.adapter.simpleName
     if (value.service is HasPassByReferenceName) {
       value.service.passByReferenceName = serviceName
     }
